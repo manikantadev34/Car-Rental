@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <style>
+        body{
+            background-color:aliceblue;
+            text-align: center;
+            
+        }
+        #div1{
+            
+            border-radius: 10%;
+            height: 40vh;
+            width: 35vw;
+            background-color:white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);;
+            /* margin-top: 200px;
+            margin-left: 550px; */
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input,button{
+            border-radius: 8%;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+    <form id="form">
+    <h1>LOGIN </h1>
+    <label for="inp1">User Name:</label><br>
+    <input type="text" id="inp1" placeholder="User name" ><br>
+    <label for="inp2">PassWord:</label><br>
+    <input type="password" id="inp2" placeholder="password"><br><br>
+    <input type="submit">   
+    <!-- <button type="submit">Login</button> -->
+    </form>
+    </div>
+    <script>
+        let form=document.getElementById("form")
+        form.addEventListener("submit",()=>{
+          let ip1=document.getElementById("inp1")
+          let ip2=document.getElementById("inp2")
+          localStorage.setItem("Name",ip1.value)
+          localStorage.setItem("pass",ip2.value)
+        })
+    </script>
+</body>
+</html>
